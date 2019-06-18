@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="../static/menu.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <script>
+        
+    </script>
+    <body>
+        <div class="menu">
+            <ul>
+                <li><a class="{{activation1}}" href=".">스위치 제어</a></li>
+                <li><a class="{{activation2}}" href="time">시간 설정</a></li>
+                <li><a class="{{activation3}}" href="stat">통계</a></li>
+            </ul>   
+        </div>
+        <div class="pannel">
+            <div id="stat">
+                <table>
+                    <tr>
+                        <td>
+                            <p>업타임 : </p>
+                        </td>
+                        <td>
+                            <p>{{uptime}}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>온도 : </p>
+                        </td>
+                        <td>
+                            <p>{{temp}}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>누적 스위칭 : </p>
+                        </td>
+                        <td>
+                            <p>{{count_sw}}</p>
+                        </td>
+                    </tr>
+                </div>
+        </div>
+    </body>
+    
+
+</html>

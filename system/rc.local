@@ -1,0 +1,70 @@
+#!/bin/bash -e
+#
+# rc.local
+#
+# This script is executed at the end of each multiuser runlevel.
+# Make sure that the script will "exit 0" on success or any other
+# value on error.
+#
+# In order to enable or disable this script just change the execution
+# bits.
+#
+# By default this script does nothing.
+
+# Print the IP address
+_IP=$(hostname -I) || true
+if [ "$_IP" ]; then
+  printf "My IP address is %s\n" "$_IP"
+fi
+
+# SCIPT for wireless
+echo "================================="
+echo "      RPi Network Settings"
+echo "================================="
+echo "+ ) Scanning for know WiFi networks"
+
+ssids=('Hellopython', 'c311_2.4G')
+connected=false
+for ssid in "${ssids[@]}"
+do
+	echo " "
+	echo "checking if ssid available:" $ssid
+	echo " "
+	if iwlist wlan0 scan | grep $ssid > /dev/null
+	then
+		echo "First WiFi in range has SSID:" $ssid
+		echo "Starting supplicant for WPA/WPA2"
+		wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf > /dev/null 2>&1
+		echo "Obtaining IP from DHCP"
+		if dhclient -1 wlan0
+		then
+			echo "Connected to WiFi(${ssid})"
+			connected=true
+			break
+		else
+			echo "DHCP server did not respond with an IP lease (DHCPOFFER)"
+			wpa_cli terminate
+			break
+		fi
+	else
+		echo "Not in range, WiFi with SSID:" $ssid
+	fi
+done
+
+createAdHocNetwork(){
+	echo "+ ) Createing RPI Hospot network."
+	ifconfig wlan0 down
+	ifconfig wlan0 10.0.0.5 netmask 255.255.255.0 up
+	service dnsmasq start
+	service hostapd start
+	echo " "
+	echo "+ ) Hotspot network created!"
+	echo " "
+}
+
+if ! $connected; then
+	createAdHocNetwork
+fi
+
+(sleep 10 && /usr/bin/python3 /home/pi/webserver/witab.py)&
+exit 0

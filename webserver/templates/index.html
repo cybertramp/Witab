@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="../static/menu.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <script>
+        function switch1(){
+            location.href = "sw1";
+        }
+        function switch2(){
+            location.href = "sw2";
+        }
+        function switch3(){
+            location.href = "sw3";
+        }
+        function switch4(){
+            location.href = "sw4";
+        }
+    </script>
+    <body>
+        <div class="menu">
+            <ul>
+                <li><a class="{{activation1}}" href=".">스위치 제어</a></li>
+                <li><a class="{{activation2}}" href="time">시간 설정</a></li>
+                <li><a class="{{activation3}}" href="stat">통계</a></li>
+            </ul>   
+        </div>
+        <div class="pannel">
+            <div id="power">
+                <table>
+                    <tr>
+                        <td>전원 1</td>
+                        <td>
+                            <label class="switch">
+                                <input id="sw1" type="checkbox" onclick="switch1() "{{ checked1 }}>
+                                <span class="slider"></span>
+                            </label>
+                        </td>
+        
+                    </tr>
+                    <tr>
+                        <td>전원 2</td>
+                        <td>
+                            <label class="switch">
+                                <input id="sw2" type="checkbox" onclick="switch2() "{{ checked2 }}>
+                                <span class="slider"></span>
+                            </label>
+                        </td>
+        
+                    </tr>
+                    <tr>
+                        <td>전원 3</td>
+                        <td>
+                            <label class="switch">
+                                <input id="sw3" type="checkbox" onclick="switch3() "{{ checked3 }}>
+                                <span class="slider"></span>
+                            </label>
+                        </td>
+        
+                    </tr>
+                    <tr>
+                        <td>전원 4</td>
+                        <td>
+                            <label class="switch">
+                                <input id="sw4" type="checkbox" onclick="switch4() "{{ checked4 }}>
+                                <span class="slider"></span>
+                            </label>
+                        </td>
+        
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+    
+
+</html>

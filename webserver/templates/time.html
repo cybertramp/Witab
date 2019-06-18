@@ -1,0 +1,292 @@
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="../static/menu.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <script>
+        function switch1(){
+            location.href = "sw1";
+        }
+        function switch2(){
+            location.href = "sw2";
+        }
+        function switch3(){
+            location.href = "sw3";
+        }
+        function switch4(){
+            location.href = "sw4";
+        }
+    </script>
+    <body>
+        <div class="menu">
+            <ul>
+                <li><a class="{{activation1}}" href=".">스위치 제어</a></li>
+                <li><a class="{{activation2}}" href="time">시간 설정</a></li>
+                <li><a class="{{activation3}}" href="stat">통계</a></li>
+            </ul>   
+        </div>
+        <div class="pannel">
+            <div id="time">
+                <p>현재시각: {{now}} </p>
+                <table>
+                    <tr>
+                        <td>전원 1</td>
+                        <td>
+                            <select name="switch_num">
+                                <option value="sw1">1번 스위치</option>
+                                <option value="sw2">2번 스위치</option>
+                                <option value="sw3">3번 스위치</option>
+                                <option value="sw4">4번 스위치</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="start_ampm">
+                                <option value="AM">오전</option>
+                                <option value="PM">오후</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="start_time">
+                                <option value="00">00:00</option>
+                                <option value="01">01:00</option>
+                                <option value="02">02:00</option>
+                                <option value="03">03:00</option>
+                                <option value="04">04:00</option>
+                                <option value="05">05:00</option>
+                                <option value="06">06:00</option>
+                                <option value="07">07:00</option>
+                                <option value="08">08:00</option>
+                                <option value="09">09:00</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                            </select>
+                        </td>
+                        <td>
+                            <p> ~ </p>
+                        </td>
+                        <td>
+                            <select name="stop_ampm">
+                                <option value="AM">오전</option>
+                                <option value="PM">오후</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="stop_time">
+                                <option value="00">00:00</option>
+                                <option value="01">01:00</option>
+                                <option value="02">02:00</option>
+                                <option value="03">03:00</option>
+                                <option value="04">04:00</option>
+                                <option value="05">05:00</option>
+                                <option value="06">06:00</option>
+                                <option value="07">07:00</option>
+                                <option value="08">08:00</option>
+                                <option value="09">09:00</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="submit" value="설정">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>전원 2</td>
+                        <td>
+                            <select name="switch_num">
+                                <option value="sw1">1번 스위치</option>
+                                <option value="sw2">2번 스위치</option>
+                                <option value="sw3">3번 스위치</option>
+                                <option value="sw4">4번 스위치</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="start_ampm">
+                                <option value="AM">오전</option>
+                                <option value="PM">오후</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="start_time">
+                                <option value="00">00:00</option>
+                                <option value="01">01:00</option>
+                                <option value="02">02:00</option>
+                                <option value="03">03:00</option>
+                                <option value="04">04:00</option>
+                                <option value="05">05:00</option>
+                                <option value="06">06:00</option>
+                                <option value="07">07:00</option>
+                                <option value="08">08:00</option>
+                                <option value="09">09:00</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                            </select>
+                        </td>
+                        <td>
+                            <p> ~ </p>
+                        </td>
+                        <td>
+                            <select name="stop_ampm">
+                                <option value="AM">오전</option>
+                                <option value="PM">오후</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="stop_time">
+                                <option value="00">00:00</option>
+                                <option value="01">01:00</option>
+                                <option value="02">02:00</option>
+                                <option value="03">03:00</option>
+                                <option value="04">04:00</option>
+                                <option value="05">05:00</option>
+                                <option value="06">06:00</option>
+                                <option value="07">07:00</option>
+                                <option value="08">08:00</option>
+                                <option value="09">09:00</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="submit" value="설정">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>전원 3</td>
+                        <td>
+                            <select name="switch_num">
+                                <option value="sw1">1번 스위치</option>
+                                <option value="sw2">2번 스위치</option>
+                                <option value="sw3">3번 스위치</option>
+                                <option value="sw4">4번 스위치</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="start_ampm">
+                                <option value="AM">오전</option>
+                                <option value="PM">오후</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="start_time">
+                                <option value="00">00:00</option>
+                                <option value="01">01:00</option>
+                                <option value="02">02:00</option>
+                                <option value="03">03:00</option>
+                                <option value="04">04:00</option>
+                                <option value="05">05:00</option>
+                                <option value="06">06:00</option>
+                                <option value="07">07:00</option>
+                                <option value="08">08:00</option>
+                                <option value="09">09:00</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                            </select>
+                        </td>
+                        <td>
+                            <p> ~ </p>
+                        </td>
+                        <td>
+                            <select name="stop_ampm">
+                                <option value="AM">오전</option>
+                                <option value="PM">오후</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="stop_time">
+                                <option value="00">00:00</option>
+                                <option value="01">01:00</option>
+                                <option value="02">02:00</option>
+                                <option value="03">03:00</option>
+                                <option value="04">04:00</option>
+                                <option value="05">05:00</option>
+                                <option value="06">06:00</option>
+                                <option value="07">07:00</option>
+                                <option value="08">08:00</option>
+                                <option value="09">09:00</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="submit" value="설정">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>전원 4</td>
+                        <td>
+                            <select name="switch_num">
+                                <option value="sw1">1번 스위치</option>
+                                <option value="sw2">2번 스위치</option>
+                                <option value="sw3">3번 스위치</option>
+                                <option value="sw4">4번 스위치</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="start_ampm">
+                                <option value="AM">오전</option>
+                                <option value="PM">오후</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="start_time">
+                                <option value="00">00:00</option>
+                                <option value="01">01:00</option>
+                                <option value="02">02:00</option>
+                                <option value="03">03:00</option>
+                                <option value="04">04:00</option>
+                                <option value="05">05:00</option>
+                                <option value="06">06:00</option>
+                                <option value="07">07:00</option>
+                                <option value="08">08:00</option>
+                                <option value="09">09:00</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                            </select>
+                        </td>
+                        <td>
+                            <p> ~ </p>
+                        </td>
+                        <td>
+                            <select name="stop_ampm">
+                                <option value="AM">오전</option>
+                                <option value="PM">오후</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="stop_time">
+                                <option value="00">00:00</option>
+                                <option value="01">01:00</option>
+                                <option value="02">02:00</option>
+                                <option value="03">03:00</option>
+                                <option value="04">04:00</option>
+                                <option value="05">05:00</option>
+                                <option value="06">06:00</option>
+                                <option value="07">07:00</option>
+                                <option value="08">08:00</option>
+                                <option value="09">09:00</option>
+                                <option value="10">10:00</option>
+                                <option value="11">11:00</option>
+                                <option value="12">12:00</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="submit" value="설정">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+    
+
+</html>
