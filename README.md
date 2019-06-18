@@ -51,6 +51,6 @@ WiFi based multitab with raspberrypi project
 
 
 
-업데이트 내역
+**업데이트 내역**
 
 - v1 업데이트
