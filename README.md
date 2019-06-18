@@ -5,9 +5,7 @@ WiFi based multitab with raspberrypi project
 
 동작 영상
 
-![video](http://img.youtube.com/vi/https://youtu.be/30rZ9v_WuzU/0.jpg)
-
-영상: https://youtu.be/30rZ9v_WuzU
+[![video](https://img.youtube.com/vi/30rZ9v_WuzU/0.jpg)](https://youtu.be/30rZ9v_WuzU)
 
 **내용**
 
