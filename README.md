@@ -3,6 +3,12 @@ WiFi based multitab with raspberrypi project
 
 라즈베리파이를 이용한 와이파이 기반 멀티탭 프로젝트입니다.
 
+동작 영상
+
+![video](http://img.youtube.com/vi/https://youtu.be/30rZ9v_WuzU/0.jpg)
+
+영상: https://youtu.be/30rZ9v_WuzU
+
 **내용**
 
 - /backup
